@@ -67,3 +67,15 @@ target_link_libraries(mavlink_testing_suite
 	${CMAKE_CURRENT_BINARY_DIR}/build_yaml/libyaml-cpp.a
 )
 
+
+include_directories(${CMAKE_CURRENT_LIST_DIR}/third_party/mavlink/include)
+add_executable(inspector
+    src/inspector.cpp
+)
+target_link_libraries(inspector
+    dronecode_sdk
+    dronecode_sdk_action
+    dronecode_sdk_telemetry
+	dronecode_sdk_mission
+)
+
