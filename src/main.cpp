@@ -36,7 +36,7 @@ int main(int argc, char** argv)
 		// For TCP : tcp://[server_host][:server_port]
 		// For UDP : udp://[bind_host][:bind_port]
 		// For Serial : serial:///path/to/serial/dev[:baudrate]
-		connection_result = dc.add_any_connection(connection_url);
+		connection_result= dc.add_any_connection(connection_url);
 	} else {
 		std::cout << "Must specify a connection" << std::endl;
 		return 1;
